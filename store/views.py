@@ -3,8 +3,6 @@ from .models import Store
 
 # Create your views here.
 
-def home(request):
-	return render(request, 'home/home.html')
 
 def store(request):
 	store = Store.objects

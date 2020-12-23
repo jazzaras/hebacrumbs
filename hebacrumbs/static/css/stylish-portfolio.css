@@ -4,10 +4,92 @@
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
  */
 
+@font-face {
+  src: url(fonts/arafo1.ttf);
+  font-family: arafo1;
+}
+
+@font-face {
+  src: url(fonts/arafo2.ttf);
+  font-family: arafo2;
+}
+
+@font-face {
+  src: url(fonts/engfo1.ttf);
+  font-family: engfo1;
+}
+
+.engfo1 {
+  font-family:engfo1;
+}
+
+@font-face {
+  src: url(fonts/engfo2.ttf);
+  font-family: engfo2;
+}
+
+.engfo2 {
+  font-family:engfo2;
+}
+
+@font-face {
+  src: url(fonts/engli.ttf);
+  font-family: engli;
+}
+
+.engli {
+  font-family:engli;
+}
+
+@font-face {
+  src: url(fonts/arasum.ttf);
+  font-family: arasum;
+}
+
+.arasum {
+  font-family:arasum;
+}
+
+@font-face {
+  src: url(fonts/arabold.ttf);
+  font-family:arabold;
+}
+
+.arabold {
+  font-family:arabold;
+}
+
+@font-face {
+  src: url(fonts/aramid.ttf);
+  font-family:aramid;
+}
+
+.aramid {
+  font-family:aramid;
+}
+
+@font-face {
+  src: url(fonts/arafoside.ttf);
+  font-family:arafoside;
+}
+
+.arafoside {
+  font-family:arafoside;
+}
+
+
+.arafo2 {
+  font-family: arafo2;
+}
+
 body,
 html {
   width: 100%;
   height: 100%;
+}
+
+.arafo1 {
+  font-family: arafo1;
 }
 
 body {
@@ -39,7 +121,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 1000;
 }
 
 .text-faded {
@@ -124,12 +206,40 @@ h6 {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #360034;
+  background: #ffe0ff;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .background1{
   background: #1a0019;
+}
+
+.stroke {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.stroke0 {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
+}
+
+.stroke2 {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.stroke-white {
+  color: black;
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
 .sidebar-nav {
@@ -144,7 +254,7 @@ h6 {
 .sidebar-nav li.sidebar-nav-item a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: black;
   padding: 25px;
   text-align: center;
 
@@ -152,7 +262,7 @@ h6 {
 
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #4a4a4a;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -161,9 +271,13 @@ h6 {
   text-decoration: none;
 }
 
+.sidebarsize {
+  font-size: 20px;
+}
+
 .sidebar-nav > .sidebar-brand {
-  font-size: 1.2rem;
-  background: rgba(52, 58, 64, 0.1);
+  font-size: 1.5rem;
+  background: #ffe0ff;
   height: 80px;
   line-height: 50px;
   padding-top: 15px;
@@ -173,11 +287,11 @@ h6 {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #fff;
+  color: black;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: black;
   background: none;
 }
 
@@ -232,6 +346,7 @@ h6 {
   font-weight: 700;
   display: block;
   max-width: 30rem;
+
 }
 
 .portfolio-item {
@@ -253,9 +368,17 @@ h6 {
   z-index: 1;
 }
 
+.padding-left {
+  padding-left:10%;
+}
+
 .portfolio-item .caption .caption-content {
   color: #fff;
   margin: auto 2rem 2rem;
+}
+
+.best-size {
+  font-size: 10px;
 }
 
 .portfolio-item .caption .caption-content h2 {
@@ -382,10 +505,35 @@ a:hover, a:focus, a:active {
   font-weight: 700;
 }
 
+.btn-block {
+    display: block;
+    width: 100%
+}
+
+.btn-group-lg>.btn+.dropdown-toggle-split,.btn-lg+.dropdown-toggle-split {
+    padding-right: .75rem;
+    padding-left: .75rem
+}
+
+.btn-group-lg>.btn,.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem
+}
+
 .bg-primary {
   background-color: #1D809F !important;
 }
+.btn-sm + .dropdown-toggle-split {
+  padding-right: $btn-padding-x-sm * .75;
+  padding-left: $btn-padding-x-sm * .75;
+}
 
+/* _buttons.scss:117 */
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
 .bg-custom{
   background-color: #A569BD !important;
 }
@@ -419,6 +567,20 @@ a:hover, a:focus, a:active {
   padding-top: 8rem;
   padding-bottom: 8rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/san.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.people {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/people.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

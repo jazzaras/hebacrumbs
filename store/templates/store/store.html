@@ -8,11 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+    <link style='' rel="icon" href="{% static 'img/fava.jpg' %}">
 
-  <title>Stylish Portfolio - Start Bootstrap Template</title>
+  <title>Heba Crumbs</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
   <!-- Custom Fonts -->
   <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -30,36 +31,34 @@
   <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
   </a>
-  <nav id="sidebar-wrapper">
+   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">Heba Crumbs</a>
+        <a class="js-scroll-trigger engfo2" href="{% url 'home' %}">Heba Crumbs</a>
       </li>
+
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="{% url 'home' %}">Home</a>
+        <a class="js-scroll-trigger arafoside active" href="{% url 'home' %}"><H5 class='sidebarsize'>الرئيسية</H5></a>
       </li>
+
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#about">About</a>
+        <a class="js-scroll-trigger arafoside" href="{% url 'store' %}"><h5 class='sidebarsize'>المتجر</h5></a>
       </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">Services</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
+      <br>
+         <img style="padding-left:20%; " height="200" width=200 class="img-fluid" src="{% static 'img/logo1.png' %}" alt="">
     </ul>
   </nav>
 <main role="main">
-  <header class="store d-flex">
+  <header class="store d-flex shadow-max">
     <div class="container text-center my-auto">
-      <h1 style="color: white;" class="mb-1">welcome to our store</h1>
-      <h3 class="mb-5">
-        <em style="color: white;">baked with love</em>
+      <h1 style="color: white;" class="mb-1 arabold" style="">مرحبا بك في قائمة طلباتنا</h1>
+      <h3 class="mb-5"> 
+        <br>  
+        <em style="color: white;" class="engfo2">Baked With Love</em>
       </h3>
-      <a style="color: purple;" class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <a style="color: purple;" class="btn btn-primary btn-xl js-scroll-trigger arafo1" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">اطلب الان</a>
+      <br>
+      
     </div>
     <div class="overlay"></div>
   </header>
@@ -71,12 +70,15 @@
           
           {% for store in store.all %}
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <h3 class="text-center">{{ store.title }}</h3>
+            <div class="card mb-4 shadow-lg">
+              <h3 class="text-center arasum">{{ store.title }}</h3>
               <img class="card-img-top" src="{{ store.image.url }}">
               <div class="card-body">
-                <p class="card-text text-center">{{store.summery}}</p>
-               <a class="btn btn-secondary " name='addtocart'>add to cart</a>
+                <p class="card-text text-center arafo1  ">{{store.summery}}</p>
+                <h4 class="card-text text-center arafo1 ">{{ store.size }}</h2>
+                <h4 class="card-text text-center arafo1 ">{{ store.sar }}</h2>
+               
+                <!-- <button name="cartadd" type="button" class="btn btn-secondary  btn-lg btn-block">Add To Cart</button> -->
               </div>
             </div>
           </div>
@@ -85,6 +87,34 @@
         </div>
       </div>
     </div>
+
+ <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/heba_crumbs/">
+            <i class="icon-social-instagram"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">
+            <i class="img-fluid fab fa-whatsapp"  style='font-size:30px'></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="{% url 'home' %}">
+            <i class="icon-social-google"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; HebaCrumbs {% now "Y" %}</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
@@ -99,7 +129,3 @@
 </body>
 
 </html>
-
-
-
-   <!-- <a href="mailto:jazzaras@yahoo.com" class="btn btn-primary my-2 border border-dark">Email Me</a> -->

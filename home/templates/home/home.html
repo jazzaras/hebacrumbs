@@ -6,16 +6,19 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link style='' rel="icon" href="{% static 'img/fava.jpg' %}">
   <meta name="description" content="">
   <meta name="author" content="">
+
+
 
   <title>Heba Crumbs</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'vendor/fontawesome-free/css/all.css' %}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
 
@@ -26,102 +29,83 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#page-top">Heba Crumbs</a>
+        <a class="js-scroll-trigger engfo2" href="{% url 'home' %}">Heba Crumbs</a>
       </li>
+
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger active" href="#page-top">home</a>
+        <a class="js-scroll-trigger active arafoside" href="{% url 'home' %}"><H5 class='sidebarsize'>الرئيسية</H5></a>
       </li>
+
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="{% url 'store' %}">Store</a>
+        <a class="js-scroll-trigger arafoside" href="{% url 'store' %}"><h5 class='sidebarsize'>المتجر</h5></a>
       </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#services">About Us</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#portfolio">Questions</a>
-      </li>
-      <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Contact</a>
-      </li>
+
+
+      <br>
+         <img style="padding-left:20%; " height="200" width=200 class="img-fluid" src="{% static 'img/logo1.png' %}" alt="">
     </ul>
   </nav>
 
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
-      <h1 style="color: white;" class="mb-1">Heba Crumbs</h1>
-      <h3 class="mb-5">
-        <em style="color: white;">a meal you will not regret</em>
+      <h1 style="color: white;" class="mb-1 engli">Heba Crumbs</h1>
+      <h3 class="mb-5 engfo2">
+        <em style="color: white;">We Make Your Day</em>
       </h3>
-      <a style="color: purple;" class="btn btn-purple btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <a style="color: purple; font-size: 15px" class="btn btn-purple btn-xl js-scroll-trigger arafo1" href="{% url 'store' %}">قائمة الطعام</a>
     </div>
     <div class="overlay"></div>
   </header>
 
-  <!-- About -->
-<!--   <section class="content-section bg-light" id="about">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-          <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-            <a href="https://unsplash.com/">Unsplash</a>!</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Services -->
   <section class="content-section bg-custom text-white text-center" id="services">
     <div class="container">
       <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">فراغ الين ما ماما تحدد</h3>
-        <h2 class="mb-5">الخدمات والاسئلة الواردة</h2>
+        <h3 class="text-secondary mb-0">سياسة الطلب</h3>
+        <h2 class="mb-5 arafo2" style="font-size:80px;">الاسئلة الواردة</h2>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-screen-smartphone"></i>
+            <i class="fas fa-dollar-sign"></i>
           </span>
           <h4>
-            <strong>استجابة سريعة</strong>
+            <strong class="arafo2">الدفع</strong>
           </h4>
-          <p class="text-faded mb-0">اتواصلو معانا على ارقام التواصل </p>
+          <p class="text-faded mb-0 arafo1">نستقبل الدفع كاش وتحويل</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-truck"></i>
           </span>
           <h4>
-            <strong>التوصيل</strong>
+            <strong class="arafo2">التوصيل</strong>
           </h4>
-          <p class="text-faded mb-0">مبلغ التوصيل يعتمد على بعد البيت  عن مكان استلام الطلبية</p>
+          <p class="text-faded mb-0 arafo1">يتم تحديد سعر التوصيل حسب الموقع</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
           <span class="service-icon rounded-circle mx-auto mb-3">
             <i class="fas fa-arrows-alt"></i>
           </span>
           <h4>
-            <strong>كم تكفي</strong>
+            <strong class="arafo2">الاحجام</strong>
           </h4>
-          <p class="text-faded mb-0">اغلب الكيكات الي عندنا تكفي من 6 الى 8 اشخاص</p>
+          <p class="text-faded mb-0 arafo1">الاحجام موضحة تحت كل منتج</p>
         </div>
         <div class="col-lg-3 col-md-6">
           <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="far fa-comment-alt"></i>
+            <i class="far fa-clock"></i>
           </span>
           <h4>
-            <strong>Question</strong>
+            <strong class="arafo2">الطلب</strong>
           </h4>
-          <p class="text-faded mb-0">I mustache you a question...</p>
+          <p class="text-faded mb-0 arafo1">وقت طلب المنتج يكون قبل موعد استلامه بيوم</p>
         </div>
       </div>
     </div>
@@ -130,13 +114,13 @@
   <!-- Callout -->
   <section class="callout">
     <div class="container text-center">
-      <h2 class="mx-auto mb-5">Frish Fruits</h2>
+      <h2 class="mx-auto mb-5 stroke2 arafo1">فواكه طازجة</h2>
       <br>
       <br>
       <br>
       <br>
 
-      <a class="btn btn-success btn-xl" href="{% url 'store' %}">Buy Now</a>
+      <a class="btn btn-success btn-xl arafo1" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">اطلب الان</a>
     </div>
   </section>
 
@@ -144,16 +128,14 @@
   <section class="content-section" id="portfolio">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Trameso</div>
-                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <div class="h2 text-center arafo2">تراميسو</div>
+                <p class="mb-0 text-center arasum">نقدم لكم تشيزكيك التراميسو، مستوحاة من التراميسو الأيطالية .</p>
               </div>
             </div>
             <img class="img-fluid" src="{% static 'img/trameso.png' %}" alt="">
@@ -163,8 +145,8 @@
           <a class="portfolio-item" href=''>
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">San Sbastian</div>
-                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                <div class="h2 text-center arafo2">سان سباستيان - الدلوعة</div>
+                <p style="font-size:16px;" class="mb-0 text-center arasum">الطعم سيأخذك  الى مدينة سان سبستيان الاسبانية والتي تعد واحدة من اجمل الشواطئ في العالم...  ومن هنا انتشرت الوصفة</p>
               </div>
             </div>
             <img class="img-fluid" src="{% static 'img/san2.png' %}" alt="">
@@ -174,44 +156,44 @@
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Strawberries</div>
-                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <div class="h2 text-center arafo2">لاتيه</div>
+                <p class="mb-0 text-center arasum">لعشاق القهوة نقدم لكم لاتيه كيك،. . . . . طبقات من اللذاذة </p>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/san2.png' %}" alt="">
+            <img class="img-fluid" src="{% static 'img/lateh.png' %}" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="#!">
+            <div class="caption">
+              <div class="caption-content ">
+                <div class="h2 text-center arafo2">دخن</div>
+                <p class="mb-0 text-center arasum">مذاق الماضي ...بلمسة الحاضر، نحن اول من قدم الدخن بالبستاشيو والقشطة </p>
+              </div>
+            </div>
+            <img class="img-fluid" src="{% static 'img/dokhon (2).png' %}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
           <a class="portfolio-item" href="#!">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Workspace</div>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <div class="h2 text-center arafo2">ميني تشيزكيك</div>
+                <p class="mb-0 text-center arasum">قطع صغيرة من السعادة من اختيارك ... بستاشيو، اوريو، تمر، تشوكلت</p>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/trameso.png' %}" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#!">
-            <div class="caption">
-              <div class="caption-content">
-                <div class="h2">Workspace</div>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="{% static 'img/trameso.png' %}" alt="">
+            <img class="img-fluid" src="{% static 'img/minicheese.png' %}" alt="">
           </a>
         </div>
         <div class="col-lg-6">
           <a class="portfolio-item" href="">
             <div class="caption">
               <div class="caption-content">
-                <div class="h2">Workspace</div>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <div class="h2 text-center arafo2">هوني بلوك</div>
+                <p class="mb-0 text-center arasum">طبقات من العسل والبسكويت الشهي ..... طبقات من السعادة</p>
               </div>
             </div>
-            <img class="img-fluid" src="{% static 'img/san2.png' %}" alt="">
+            <img class="img-fluid" src="{% static 'img/honeyblock.png' %}" alt="">
           </a>
         </div>
       </div>
@@ -219,13 +201,13 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="content-section bg-pink text-white">
+<!--   <section class="content-section bg-pink text-white">
     <div class="container text-center">
       <h2 class="mb-4">الصورة الي تحت هي بوست من حسابنا في الانستجرام </h2>
 
-      <a href="#!" class="btn btn-purple btn-xl js-scroll-trigger">تابعنا</a>
+      <a href="https://www.instagram.com/heba_crumbs" class="btn btn-purple btn-xl js-scroll-trigger">تابعنا</a>
     </div>
-  </section>
+  </section> -->
 
   <div class="text-center">
   <div style="">  
@@ -241,8 +223,8 @@
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-twitter"></i>
+          <a class="social-link rounded-circle text-white mr-3" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">
+            <i class="img-fluid fab fa-whatsapp"  style='font-size:30px'></i>
           </a>
         </li>
         <li class="list-inline-item">

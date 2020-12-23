@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Stylish Portfolio - Start Bootstrap Template</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+
+      <style>
+      hr {
+        width: 75%;        
+        height: 0.5px;
+        background-color: gray;
+      }
+
+    </style>
+</head>
+
+<body id="page-top" class="">
+
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+   <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" href="#page-top">Heba Crumbs</a>
+      </li>
+
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger active" href="{% url 'home' %}"><H5>الرئيسية</H5></a>
+      </li>
+
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="{% url 'store' %}"><h5>المتجر</h5></a>
+      </li>
+
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="#services"><h5>أرائكم</h5></a>
+      </li>
+      <br>
+         <img style="padding-left:20%; " height="200" width=200 class="img-fluid" src="{% static 'img/logo1.png' %}" alt="">
+    </ul>
+  </nav>
+<main role="main">
+     <header class="people d-flex shadow-max">
+    <div class="container text-center my-auto">
+      <h1 style="color: white; font-size: 100px" class="mb-1 stroke" style="">ارآء  عملاءنا</h1>
+      <h3 class="mb-5">
+        <em style="color: white;" class="stroke">عبارة جميلة</em>
+      </h3>
+      <a style="color: purple;" class="btn btn-secondary btn-xl js-scroll-trigger" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">شاركونا  بآرائكم</a>
+      <br>
+      
+    </div>
+    <div class="overlay"></div>
+  </header>
+    <br><br>
+    {% for opin in opin.all %}
+    <div class="text-center">   
+    <a style="color: black; text-decoration: none;" href="#">
+    <img class="img-fluid shadow-sm" src="{{opin.image.url}}" height=75% width=75%>
+    
+    <a />
+    <br>
+    <hr>
+    </div>
+  
+    
+
+    {% endfor %}
+    </div>
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/heba_crumbs/">
+            <i class="icon-social-instagram"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="https://api.whatsapp.com/send?phone=966504606151&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B...%0A%0A%D8%B7%D9%84%D8%A8%D9%8A%20%D9%83%D8%A7%D9%84%D8%AA%D8%A7%D9%84%D9%8A%20..%0A%0A(................)%20%0A%0A%D8%A7%D9%84%D9%8A%D9%88%D9%85%20%20%20%20(...........)%20%0A%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D9%87%20%20(..........)%20%0A%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%20(..........)%0A%0A%0A%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%B3%D9%8A%D9%83%D9%88%D9%86%20%0A%E2%80%A2%20%D9%83%D8%A7%D8%B4%0A%E2%80%A2%20%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%0A%0A(%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%AD%D8%B3%D8%A8%20%D8%A7%D9%84%D8%AD%D9%8A%20)%0A%0A%0A(%20%D8%AC%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%85%D9%88%D8%B6%D8%AD%D9%87%20%D8%A7%D8%B3%D8%B9%D8%A7%D8%B1%D9%87%D8%A7%20%D9%81%D9%8A%20%D9%87%D8%A7%D9%8A%D9%84%D8%A7%D9%8A%D8%AA%20%D8%AD%D8%B3%D8%A7%D8%A8%20%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AA%D8%AC%D8%B1%D8%A7%D9%85%20)%0A%0A%0A%7B%40heba_crumbs%7D">
+            <i class="img-fluid fab fa-whatsapp"  style='font-size:30px'></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="{% url 'home' %}">
+            <i class="icon-social-google"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Copyright &copy; HebaCrumbs {% now "Y" %}</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/stylish-portfolio.min.js' %}"></script>
+
+</body>
+
+</html>
+
+   <!-- <a href="mailto:jazzaras@yahoo.com" class="btn btn-primary my-2 border border-dark">Email Me</a> -->
